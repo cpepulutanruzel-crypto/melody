@@ -1,10 +1,10 @@
 
-
 function Hero() {
   return (
     <section className="hero" id="home">
 
-      <div className="container-fluid h-100">
+      <div className="container h-100">
+
         <div className="row h-100 align-items-center">
 
           <div className="col-12 col-lg-8 col-xl-7">
@@ -15,16 +15,16 @@ function Hero() {
                 Property For Sale
               </p>
 
-              <h1 className="display-1 fw-medium mb-4">
+              <h1 className="hero-title fw-medium mb-4">
                 Modern Family Home
               </h1>
 
-              <p className="fs-5 mb-2">
+              <p className="hero-location fs-5 mb-2">
                 📍 Brgy San Ignacio, San Pablo, Laguna
               </p>
 
-              <h2 className="fw-semibold mb-4">
-                ₱5,000,000 (negotiable)
+              <h2 className="hero-price fw-semibold mb-4">
+                ₱5,000,000 <span>(negotiable)</span>
               </h2>
 
               <a
@@ -39,6 +39,7 @@ function Hero() {
           </div>
 
         </div>
+
       </div>
 
     </section>
@@ -46,3 +47,4 @@ function Hero() {
 }
 
 export default Hero;
+

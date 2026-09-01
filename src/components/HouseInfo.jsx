@@ -1,9 +1,11 @@
+
 function HouseInfo() {
   return (
     <section id="about" className="py-5">
+
       <div className="container py-5">
 
-        <div className="row align-items-center g-5">
+        <div className="row align-items-center g-4 g-lg-5">
 
           {/* Description */}
           <div className="col-12 col-lg-7">
@@ -12,9 +14,9 @@ function HouseInfo() {
               About The Property
             </p>
 
-            <h2 className="display-5 fw-semibold mb-4">
+            <h2 className="house-info-title fw-semibold mb-4">
               A Home Designed
-              <br />
+              <br className="d-none d-md-block" />
               For Modern Living
             </h2>
 
@@ -38,14 +40,15 @@ function HouseInfo() {
           {/* Property Details */}
           <div className="col-12 col-lg-5">
 
-            <div className="property-details p-4 p-lg-5">
+            <div className="property-details p-4 p-md-5">
 
               <h3 className="h4 fw-semibold mb-4">
                 Property Details
               </h3>
 
-              <div className="row g-4">
+              <div className="row g-3 g-md-4">
 
+                {/* Bedrooms */}
                 <div className="col-6">
                   <div className="property-detail">
                     <span className="detail-label">
@@ -58,6 +61,8 @@ function HouseInfo() {
                   </div>
                 </div>
 
+
+                {/* Bathrooms */}
                 <div className="col-6">
                   <div className="property-detail">
                     <span className="detail-label">
@@ -70,6 +75,8 @@ function HouseInfo() {
                   </div>
                 </div>
 
+
+                {/* Floor Area */}
                 <div className="col-6">
                   <div className="property-detail">
                     <span className="detail-label">
@@ -82,6 +89,8 @@ function HouseInfo() {
                   </div>
                 </div>
 
+
+                {/* Lot Area */}
                 <div className="col-6">
                   <div className="property-detail">
                     <span className="detail-label">
@@ -103,8 +112,10 @@ function HouseInfo() {
         </div>
 
       </div>
+
     </section>
   );
 }
 
 export default HouseInfo;
+

@@ -17,7 +17,6 @@ import Bathroom from "../assets/bathroom.jpg";
 import Verandab from "../assets/verandab.jpg";
 
 function Gallery() {
-  // Stores the image currently being viewed
   const [selectedImage, setSelectedImage] = useState(null);
 
   const galleryItems = [
@@ -95,23 +94,26 @@ function Gallery() {
 
   return (
     <section id="gallery" className="py-5">
+
       <div className="container py-5">
 
-        {/* Heading */}
-        <div className="row mb-5">
+        {/* Section Heading */}
+        <div className="row mb-4 mb-lg-5">
+
           <div className="col-12 col-lg-7">
 
             <p className="text-uppercase text-secondary fw-semibold letter-spacing mb-3">
               Property Gallery
             </p>
 
-            <h2 className="display-5 fw-semibold">
+            <h2 className="gallery-title fw-semibold">
               Take A Look
-              <br />
+              <br className="d-none d-md-block" />
               Inside The Home
             </h2>
 
           </div>
+
         </div>
 
 
@@ -119,6 +121,7 @@ function Gallery() {
         <div className="row g-3">
 
           {galleryItems.map((item, index) => (
+
             <div
               key={index}
               className={
@@ -131,6 +134,13 @@ function Gallery() {
               <div
                 className="gallery-item"
                 onClick={() => setSelectedImage(item)}
+                role="button"
+                tabIndex="0"
+                onKeyDown={(event) => {
+                  if (event.key === "Enter" || event.key === " ") {
+                    setSelectedImage(item);
+                  }
+                }}
               >
 
                 <img
@@ -146,6 +156,7 @@ function Gallery() {
               </div>
 
             </div>
+
           ))}
 
         </div>
@@ -158,6 +169,7 @@ function Gallery() {
       ========================= */}
 
       {selectedImage && (
+
         <div
           className="image-modal"
           onClick={() => setSelectedImage(null)}
@@ -174,7 +186,7 @@ function Gallery() {
           </button>
 
 
-          {/* Full image */}
+          {/* Original image */}
           <img
             src={selectedImage.image}
             alt={selectedImage.title}
@@ -183,6 +195,7 @@ function Gallery() {
           />
 
         </div>
+
       )}
 
     </section>
